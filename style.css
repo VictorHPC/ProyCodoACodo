@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Nunitosans-Regular";
+    src: url(./fonts/Nunito-Regular.ttf);
+}
+body{
+    font-size: 2rem; 
+    
+}
+
+/*trabajando sobre el h1*/
+
+h1{
+   font-size: 40px;
+   text-transform: uppercase;
+   text-align: center;
+   background-color: rgb(255, 119, 0);
+   color: white;   
+}
+
+h1 b{
+    color: white;
+}
+
+/*Armado del header*/
+
+.head1{
+    display: flex;
+    /* border: solid 2px black; */
+    padding: 50px;
+    /* background-color: #b3aeae;     */
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover;
+    object-position: top;
+     */
+    border-radius: 80%;
+}
+header{
+    padding:auto;
+    margin: auto;
+    width: auto;
+    height: auto;
+    justify-content: space-between;
+    text-align: start;  
+}
+.continer-fluid{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto; 
+    
+}
+
+/*trabajando con el navegador*/
+.navbar{
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(255, 119, 0);
+    text-transform: uppercase; 
+}
+
+.navbar > ul> li{
+    float: left;
+    margin-top: 20px 0;
+    list-style: none;
+    
+}
+.navbar > ul > li a{
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.navbar a:hover{
+    background-color: rgb(0, 128, 115);
+    cursor:pointer; 
+}
+/*trabajando con el main*/
+/*armado del grid*/
+.contenedor{
+    height: 1000px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(rgba(5,7,12,0.1),rgba(5,7,12,0.1)),
+    url(img/cuatro\ por\ cuatro.jpg) no-repeat center center fixed;
+    background-size: cover;
+    position: static;
+}
+.contenedor .cuerpo{
+    display: grid;
+    width: 800px;
+    height: 1000px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    justify-content: center;
+    align-content: flex-start;
+    gap: 10px;
+    padding: 20px;
+    opacity: 0.7;
+}
+.imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(355, 255, 255);
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+   
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.imagen:hover{
+    filter: contrast(2) ;
+    transform: scale(1.1);
+}
+
+/*Trabajando sobre el formulario*/
+form{ 
+    width:autopx;
+    height: autopx;
+    padding:16px; 
+    border-radius:10px; 
+    margin-top: 10px; 
+    background-color:rgb(255, 119, 0)
+} 
+form{
+    color: white;
+}
+form label{ 
+    width:74px; 
+    font-weight:bold; 
+    display:inline-block; 
+    margin: 7px;
+    color: white;
+} 
+form input[type="text"],
+form input[type="number"], 
+form select{
+     width:180px; 
+     padding:3px 10px; 
+     border:1px solid #f6f6f6;
+     border-radius:3px; 
+     background-color:#f6f6f6; 
+     margin:8px 0; 
+     display:inline-block; 
+}
+form input[type="submit"]{ 
+    width:100%;
+     padding:20px 26px;
+     margin-top:32px; 
+     border:1px solid #000; 
+     border-radius:5px; 
+     display:block; 
+     color:#fff; 
+     background-color:#000; 
+}
+ form input[type="submit"]:hover{
+     cursor:pointer; 
+    }
+    
+/* trabajando sobre el footer */
+
+footer{
+    float: left;
+    width: 100%;
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(255, 119, 0);
+}
+.pie{
+    display: flex;
+    justify-content: space-between ;
+}
+p{
+    text-align: center;
+}
+footer img{
+    
+    border-radius: 100%;
+    
+    width: 150px;
+    height:150px;
+}
+
+.social >a >img{
+    align-items: stretch;
+    border-radius: 100%;
+    width: 50px;
+    height:50px;
+
+}
+/* definiendo la media query para diseño responsive */
+@media (max-width:768px){
+    .head1{
+        display: inline-block;
+        justify-content: center;
+        background-color: white;
+        width:70%;
+        height: 50%;
+    }
+    .logo img{
+        width: 100%;
+        height: 25%;
+        justify-content: center;
+        /* object-fit: cover;
+        object-position: top;
+         */
+        border-radius: 80%;
+        border: white solid 5px ;
+    }
+    .continer-fluid{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        height: 50%;
+    }
+        .h1{
+        width: 100%;
+        text-align: center;
+      
+       }
+       .navbar > ul > li{
+        width: 100%;
+        margin: 0;
+        border-bottom: solid 1px rgb(255, 119, 0);
+
+    } 
+
+    .navbar > ul > li a{
+        text-align: center;
+        display: block;
+    }  
+    .contenedor{
+        flex-direction: column-reverse;
+        background: linear-gradient(rgba(5,7,12,0.1),rgba(5,7,12,0.1)),
+        url(img/cuatro\ por\ cuatro.jpg) no-repeat center center fixed;
+        background-size: cover;
+        position: static;
+        width: 100%;
+    } 
+    .contenedor .cuerpo{
+    display: grid;
+    width: 400px;
+    height: 500px;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+    justify-content: center;
+    align-content: flex-start;
+    gap: 10px;
+    }
+}
